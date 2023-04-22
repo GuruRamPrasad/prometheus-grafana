@@ -25,7 +25,11 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ----------------------------------------------------------------------------------------------  
     4  sudo yum install grafana -y 
-    5  sudo systemctl daemon-reload
+    
+    5  sudo systemctl daemon-reload -----------( daemon-reload - Load the unit configuration file of the running designated unit(s) to make unit file configuration changes without stopping the service. Note that this is different from the reload command
+
+reload - Load the service configuration file of the running designated unit(s) to make service configuration changes without stopping the service. Note that this is different from the daemon-reload command )
+
     6  sudo systemctl start grafana-server
     7  sudo systemctl status grafana-server
     8  sudo systemctl enable grafana-server.service
